@@ -143,3 +143,17 @@ def test_six_ones():
 def test_all(test_input, expected):
     actual = GameLogic.calculate_score(test_input)
     assert actual == expected
+
+
+
+@pytest.mark.parametrize(
+    "test_cas,expected",
+    [
+        (tuple(), 0),
+        ((1, 1, 2, 2, 5, 5), 1500),
+        ((6, 2, 1, 3, 4, 5), 1500),
+    ],
+)
+def test_moha_all(test_cas, expected):
+    actual = GameLogic.calculate_score(test_cas)
+    assert actual == expected
