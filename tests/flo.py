@@ -55,7 +55,6 @@ def diff(game_play_func, path="", sample=""):
 
         assert len(roll) == num, f"unexpected number of dice {num}"
 
-
         return roll
 
     # store the "real" print & input so we can restore them later
@@ -112,7 +111,6 @@ def _extract_rolls(lines):
 
 
 def _find_differences(text, expected_lines):
-
     actual_lines = text.splitlines()
 
     diffed = difflib.unified_diff(actual_lines, expected_lines, lineterm="")
